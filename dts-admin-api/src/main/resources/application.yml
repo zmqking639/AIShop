@@ -3,17 +3,18 @@ spring:
     active: @profile.active@
   messages:
     encoding: UTF-8
-  servlet:
-    multipart:
-      max-file-size: 50Mb
-      max-request-size: 80Mb
-      location: /tmp/tomcat_upload
-
+#  servlet:
+#    multipart:
+#      max-file-size: 50Mb
+#      max-request-size: 80Mb
+#      location: /tmp/tomcat_upload
 
 server:
   port: 8083
   servlet:
     context-path: /demo
+  tomcat:
+    basedir: /tmp/tomcat
 
 logging:
   level:
